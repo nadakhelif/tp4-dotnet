@@ -21,7 +21,7 @@ namespace WebApplication4.Data
 				List<string> c = new List<string>();
 				foreach( Student s in students)
 				{
-					if(!c.Contains(s.course)) c.Add(s.course);
+					if (!c.Contains(s.course)) { c.Add(s.course); }
 				}
 				return c;
 			}

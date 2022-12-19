@@ -8,11 +8,11 @@
     List<Student> l = (List<Student>)ViewData["StudentsList"];
 }
 
-@if (@l==null || @l.Count == 0)
+@if (@l==null )
 {
     <div class="alert alert-info" role="alert" style="margin: 20px">
         <h1>No students taking this course !</h1>
-        <h5>Try another one.</h5>
+        
     </div>
 }
 else{
@@ -24,10 +24,10 @@ else{
             <div class="card" style="width: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title"> @s.id) @s.last_name @s.first_name  </h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><b>Phone number:</b> @s.phone_number</h6>
-                    <h6 class="card-subtitle mb-2 text-muted"><b>University:</b> @s.university</h6>
-                    <h6 class="card-subtitle mb-2 text-muted"> <b>Course: </b>@s.course</h6>
-                    <h6 class="card-subtitle mb-2 text-muted"> <b>Timestamp: </b>@s.timestamp</h6>
+                    <h6><b>Phone number:</b> @s.phone_number</h6>
+                    <h6><b>University:</b> @s.university</h6>
+                    <h6> <b>Course: </b>@s.course</h6>
+                    <h6> <b>Timestamp: </b>@s.timestamp</h6>
 
                 </div>
 
